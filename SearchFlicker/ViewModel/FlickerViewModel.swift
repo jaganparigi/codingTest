@@ -1,5 +1,7 @@
 import Foundation
+import Combine
 
+// Ensure that the ViewModel runs on the main thread
 class FlickrViewModel: ObservableObject {
     @Published var items: [FlickerList] = []
     @Published var searchText: String = "" {
@@ -12,13 +14,9 @@ class FlickrViewModel: ObservableObject {
     }
 
     var apiClient = APIClient()
-    private var debounceTask: Task<Void, Never>?
 
     init(apiClient: APIClient = APIClient()) {
         self.apiClient = apiClient
-        Task {
-            await fetchItems()
-        }
     }
 
     func fetchItems() async {
@@ -26,14 +24,12 @@ class FlickrViewModel: ObservableObject {
             guard let fetchedItems = try await apiClient.fetchItems(searchText: searchText) else {
                 return
             }
-            DispatchQueue.main.async {
-                self.items = fetchedItems.items
-            }
+            self.items = fetchedItems.items
         } catch {
             print("Failed to get flicker list: \(error)")
         }
     }
-    
+
     var filteredItems: [FlickerList] {
         return items
     }

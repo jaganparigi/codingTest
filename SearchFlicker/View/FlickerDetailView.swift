@@ -56,7 +56,7 @@ struct FlickerDetailView: View {
     }
 
     // Function to clean HTML tags from the description
-    private func cleanDescription(_ html: String) -> String? {
+    func cleanDescription(_ html: String) -> String? {
         // Remove HTML tags
         guard let data = html.data(using: .utf8) else { return nil }
         do {
@@ -73,7 +73,7 @@ struct FlickerDetailView: View {
     }
 
     // Function to extract the author's name (no email)
-    private func extractAuthorName(from authorField: String) -> String {
+    func extractAuthorName(from authorField: String) -> String {
         // Extract the author's name from the part in quotes
         if let startRange = authorField.range(of: "\""),
            let endRange = authorField.range(of: "\"", range: startRange.upperBound..<authorField.endIndex) {
@@ -84,7 +84,7 @@ struct FlickerDetailView: View {
     }
 
     // Function to format the published date
-    private func formattedDate(from dateString: String) -> String? {
+    func formattedDate(from dateString: String) -> String? {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         if let date = formatter.date(from: dateString) {
@@ -96,7 +96,7 @@ struct FlickerDetailView: View {
     }
 
     // Create content for sharing
-    private func createShareContent() -> String {
+    func createShareContent() -> String {
         let title = item.title
         let description = cleanDescription(item.description) ?? "No description available"
         let author = extractAuthorName(from: item.author)
@@ -113,7 +113,7 @@ struct FlickerDetailView: View {
     }
 
     // Function to extract the width and height of the image from the description field
-    private func extractImageDimensions(from description: String) -> (width: Int, height: Int)? {
+    func extractImageDimensions(from description: String) -> (width: Int, height: Int)? {
         // Search for width and height in the HTML description
         let regex = try? NSRegularExpression(pattern: "width=\"(\\d+)\" height=\"(\\d+)\"", options: [])
         if let match = regex?.firstMatch(in: description, options: [], range: NSRange(description.startIndex..., in: description)) {

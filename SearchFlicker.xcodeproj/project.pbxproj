@@ -44,6 +44,7 @@
 		79B12DAE2CA59D0600209A0C /* ImageLoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadView.swift; sourceTree = "<group>"; };
 		79B12DB02CA59D2900209A0C /* FlickerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerDetailView.swift; sourceTree = "<group>"; };
 		C18372222CEE2CBA00827F04 /* SearchFlickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchFlickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1B2CF2B2CEE5D4500939E9B /* SearchFlicker.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = SearchFlicker.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -71,6 +72,7 @@
 		79B12D862CA59B0100209A0C = {
 			isa = PBXGroup;
 			children = (
+				C1B2CF2B2CEE5D4500939E9B /* SearchFlicker.xctestplan */,
 				79B12D912CA59B0100209A0C /* SearchFlicker */,
 				C18372232CEE2CBA00827F04 /* SearchFlickerTests */,
 				79B12D902CA59B0100209A0C /* Products */,
