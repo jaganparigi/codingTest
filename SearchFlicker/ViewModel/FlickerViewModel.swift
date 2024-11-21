@@ -14,10 +14,16 @@ class FlickrViewModel: ObservableObject {
     }
 
     var apiClient = APIClient()
-
-    init(apiClient: APIClient = APIClient()) {
-        self.apiClient = apiClient
+    var previosSearchText: String = ""
+    init() {
+        Task {
+            await fetchItems()
+        }
     }
+
+//    init(apiClient: APIClient = APIClient()) {
+//        self.apiClient = apiClient
+//    }
 
     func fetchItems() async {
         do {

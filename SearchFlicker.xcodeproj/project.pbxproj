@@ -18,6 +18,7 @@
 		79B12DAD2CA59CD000209A0C /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12DAC2CA59CD000209A0C /* SearchView.swift */; };
 		79B12DAF2CA59D0600209A0C /* ImageLoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12DAE2CA59D0600209A0C /* ImageLoadView.swift */; };
 		79B12DB12CA59D2900209A0C /* FlickerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B12DB02CA59D2900209A0C /* FlickerDetailView.swift */; };
+		C1B2CF312CEF815800939E9B /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2CF302CEF815800939E9B /* MockAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		79B12DB02CA59D2900209A0C /* FlickerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerDetailView.swift; sourceTree = "<group>"; };
 		C18372222CEE2CBA00827F04 /* SearchFlickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchFlickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B2CF2B2CEE5D4500939E9B /* SearchFlicker.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = SearchFlicker.xctestplan; sourceTree = "<group>"; };
+		C1B2CF302CEF815800939E9B /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -113,6 +115,7 @@
 		79B12DA02CA59B4100209A0C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				C1B2CF302CEF815800939E9B /* MockAPIClient.swift */,
 				79B12DA62CA59BDB00209A0C /* APICall.swift */,
 			);
 			path = Utilities;
@@ -260,6 +263,7 @@
 				79B12DB12CA59D2900209A0C /* FlickerDetailView.swift in Sources */,
 				79B12DA72CA59BDB00209A0C /* APICall.swift in Sources */,
 				79B12D932CA59B0100209A0C /* SearchFlickerApp.swift in Sources */,
+				C1B2CF312CEF815800939E9B /* MockAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
